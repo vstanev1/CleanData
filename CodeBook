@@ -1,0 +1,9 @@
+This code book complements the run_analysis.R script. 
+The first part of the script reads into R six different data files (three each from the test and the training sets). 
+The next step is to combine the data itself (from X-test.txt and X_train.txt) 
+into one big data frame with 10299 observations and 563 variables. 
+The other files are used to rename the variables, and to convert the activities (coded as integers) into 
+factors with labels. From this data frame only the ones the variables with names containing “mean()” and “std()” are
+extracted (total of 81 variables). Using the dplyr functions group_by (to group by activity) and summarize 
+(to find the mean and standard deviation for each variable in each group) the final data set (called data_summ)
+with 6 observations (for the six activities) and 161 variables is obtained.  
